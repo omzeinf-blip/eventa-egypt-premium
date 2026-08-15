@@ -7,11 +7,12 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary">
-              <Ticket className="h-5 w-5 text-primary-foreground" />
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-lg font-black text-primary-foreground">
+              E
             </span>
             <span className="text-xl font-extrabold">EVENTA</span>
           </div>
+
           <p className="text-sm leading-7 text-muted-foreground">
             منصة مصرية لحجز تذاكر الحفلات والفعاليات بسهولة وأمان.
           </p>
