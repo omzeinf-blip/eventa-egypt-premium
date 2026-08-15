@@ -18,7 +18,10 @@ export const Route = createFileRoute("/checkout")({
       { name: "description", content: "أكمل بيانات الحجز واختر عدد التذاكر لإتمام عملية الشراء." },
       { property: "og:title", content: "إتمام الحجز — EVENTA" },
       { property: "og:description", content: "أكمل بيانات الحجز واختر عدد التذاكر." },
+      { property: "og:image", content: "/logo.png" },
+      { name: "twitter:image", content: "/logo.png" },
     ],
+
   }),
   component: Checkout,
 });
