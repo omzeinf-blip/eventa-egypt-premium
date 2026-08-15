@@ -100,7 +100,7 @@ function EventDetails() {
             >
               <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
                 <h3 className="truncate text-lg font-extrabold">{t.name}</h3>
-                <p className="shrink-0 text-lg font-extrabold gradient-text">
+                <p dir="ltr" className="shrink-0 text-lg font-extrabold gradient-text">
                   {t.price.toLocaleString("en-US")} EGP
                 </p>
               </div>

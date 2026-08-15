@@ -95,7 +95,7 @@ function Checkout() {
                         <span className="font-bold">{t.name}</span>
                         {active && <Check className="h-4 w-4 shrink-0 text-primary" />}
                       </span>
-                      <span className="mt-1 block text-sm text-muted-foreground">
+                      <span dir="ltr" className="mt-1 block text-right text-sm text-muted-foreground">
                         {fmt(t.price)}
                       </span>
                     </button>
@@ -175,17 +175,17 @@ function Checkout() {
               </div>
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">الإجمالي الفرعي</dt>
-                <dd className="font-bold">{fmt(subtotal)}</dd>
+                <dd dir="ltr" className="font-bold">{fmt(subtotal)}</dd>
               </div>
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">رسوم الخدمة</dt>
-                <dd className="font-bold">{fmt(fees)}</dd>
+                <dd dir="ltr" className="font-bold">{fmt(fees)}</dd>
               </div>
             </dl>
 
             <div className="mt-5 flex items-center justify-between border-t border-border pt-5">
               <span className="font-bold">الإجمالي</span>
-              <span className="text-2xl font-extrabold gradient-text">{fmt(total)}</span>
+              <span dir="ltr" className="text-2xl font-extrabold gradient-text">{fmt(total)}</span>
             </div>
 
             <button

@@ -39,7 +39,7 @@ export function EventCard({ event }: { event: EventItem }) {
         <div className="mt-auto flex items-center justify-between gap-3 pt-3">
           <div className="min-w-0">
             <p className="text-xs text-muted-foreground">يبدأ من</p>
-            <p className="truncate text-lg font-extrabold gradient-text">
+            <p dir="ltr" className="truncate text-lg font-extrabold gradient-text">
               {event.price.toLocaleString("en-US")} EGP
             </p>
           </div>
