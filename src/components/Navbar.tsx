@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Ticket } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "الرئيسية", to: "/", hash: undefined as string | undefined },
