@@ -27,7 +27,7 @@ export function Navbar() {
             <li key={l.label}>
               <Link
                 to={l.to}
-                hash={l.hash}
+                {...(l.hash ? { hash: l.hash } : {})}
                 className="transition-colors hover:text-foreground"
               >
                 {l.label}
@@ -57,7 +57,7 @@ export function Navbar() {
               <li key={l.label}>
                 <Link
                   to={l.to}
-                  hash={l.hash}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="block rounded-xl px-3 py-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 >

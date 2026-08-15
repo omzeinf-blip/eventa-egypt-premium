@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { events, getEvent } from "@/data/events";
 
-type CheckoutSearch = { event?: string; ticket?: string };
+type CheckoutSearch = { event?: string | undefined; ticket?: string | undefined };
 
 export const Route = createFileRoute("/checkout")({
   validateSearch: (search: Record<string, unknown>): CheckoutSearch => ({

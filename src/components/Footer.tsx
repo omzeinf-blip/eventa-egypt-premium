@@ -31,13 +31,13 @@ export function Footer() {
           <h4 className="mb-4 font-bold">روابط سريعة</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             {[
-              { label: "الرئيسية", hash: undefined },
+              { label: "الرئيسية", hash: "" },
               { label: "الإيفنتات", hash: "events" },
               { label: "عن المنصة", hash: "about" },
               { label: "تواصل معنا", hash: "contact" },
             ].map((l) => (
               <li key={l.label}>
-                <Link to="/" hash={l.hash} className="transition-colors hover:text-foreground">
+                <Link to="/" {...(l.hash ? { hash: l.hash } : {})} className="transition-colors hover:text-foreground">
                   {l.label}
                 </Link>
               </li>
