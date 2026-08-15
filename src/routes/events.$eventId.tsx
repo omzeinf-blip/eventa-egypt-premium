@@ -24,7 +24,10 @@ export const Route = createFileRoute("/events/$eventId")({
         { name: "description", content: `${event.title} — ${event.date} في ${event.location}. احجز تذكرتك الآن.` },
         { property: "og:title", content: title },
         { property: "og:description", content: event.description.slice(0, 150) },
+        { property: "og:image", content: event.image },
+        { name: "twitter:image", content: event.image },
       ],
+
     };
   },
   component: EventDetails,
