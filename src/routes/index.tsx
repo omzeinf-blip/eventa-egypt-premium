@@ -27,7 +27,10 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "اكتشف أفضل الحفلات والفعاليات واحجز تذكرتك بسهولة وأمان.",
       },
+      { property: "og:image", content: "/logo.png" },
+      { name: "twitter:image", content: "/logo.png" },
     ],
+
   }),
   component: Index,
 });
