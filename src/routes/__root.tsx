@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -37,11 +37,9 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
+
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
@@ -88,7 +86,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "اكتشف أفضل الحفلات والفعاليات واحجز تذكرتك بسهولة وأمان.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/logo.png" },
     ],
     links: [
       {
@@ -102,7 +102,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;700;900&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: "/favicon.ico" },
     ],
+
   }),
 
   shellComponent: RootShell,
